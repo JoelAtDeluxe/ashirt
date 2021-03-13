@@ -58,7 +58,7 @@ jobs:
     - name: Build Pr (Linux)
       if: matrix.os == 'ubuntu-16.04' && !contains(github.ref, 'tags/v') && !contains(github.ref, 'refs/heads/master') && !contains(github.ref, 'refs/heads/release-')
       run: |
-        sudo apt install libxcb-keysyms1
+        sudo apt install libxcb-keysyms1-dev
         qmake PREFIX=/usr -config release
         make -j2
 
