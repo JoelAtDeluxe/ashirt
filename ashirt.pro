@@ -166,7 +166,7 @@ unix {
   message("PREFIX: |$$PREFIX|")
 
   INSTALLS += target desktop icons
-  target.path = $$INSTROOT$$BINDIR
+  target.path = $$BINDIR
 
   # Create appimage structure
   desktop.path = $$DATADIR/applications
@@ -177,7 +177,7 @@ unix {
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
+# else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
