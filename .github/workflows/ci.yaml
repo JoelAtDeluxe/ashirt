@@ -27,7 +27,8 @@ jobs:
     needs: [store-sha8]
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [macos-latest, ubuntu-16.04]
+        qt-version: ['5.15.2']
       fail-fast: false
     runs-on: ${{ matrix.os }}
 
