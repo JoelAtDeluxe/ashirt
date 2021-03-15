@@ -58,6 +58,7 @@ jobs:
     - name: Build Pr (Linux)
       if: matrix.os == 'ubuntu-16.04' && !contains(github.ref, 'tags/v') && !contains(github.ref, 'refs/heads/master') && !contains(github.ref, 'refs/heads/release-')
       run: |
+        echo "Building!"
         sudo apt install libxcb-keysyms1-dev desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-util1 \
                          libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 \
                          libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 \
